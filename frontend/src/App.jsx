@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import UserManagement from './pages/UserManagement';
 
 // Protected Route Component
 function ProtectedRoute({ children }) {
@@ -58,6 +59,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/users" 
+            element={
+              <ProtectedRoute>
+                <UserManagement />
               </ProtectedRoute>
             } 
           />

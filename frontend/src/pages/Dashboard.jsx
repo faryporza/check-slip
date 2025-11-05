@@ -201,6 +201,7 @@ export default function Dashboard() {
               </button>
               {user?.role === 'admin' && (
                 <button 
+                  onClick={() => navigate('/users')}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = 'rgba(226, 209, 249, 0.4)';
                     e.target.style.transform = 'translateY(-2px)';

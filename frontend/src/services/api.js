@@ -45,6 +45,9 @@ export const authAPI = {
   getAllUsers: () => api.get('/auth/users'),
   updateUserRole: (userId, role) => api.put(`/auth/users/${userId}/role`, { role }),
   deleteUser: (userId) => api.delete(`/auth/users/${userId}`),
+  
+  // Admin create user (same as register but explicitly for admin use)
+  createUser: (userData) => api.post('/auth/register', userData),
 };
 
 export default api;
