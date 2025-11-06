@@ -153,22 +153,6 @@ export default function Dashboard({ onLogout }) {
         </div>
       </div>
 
-      {/* Quick Actions */}
-      <div className="bg-white/95 p-6 rounded-[20px] border-2 border-[#e2d1f9] shadow-[0_4px_6px_rgba(0,0,0,0.07)] mb-6">
-        <h2 className="text-xl font-semibold text-[#6c5b7b] mb-4">เมนูด่วน</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <button className="p-4 bg-gradient-to-br from-[#b5deff] to-[#e2d1f9] rounded-[15px] text-[#6c5b7b] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_8px_rgba(0,0,0,0.1)]">
-            📋 ดูสลิปทั้งหมด
-          </button>
-          <button className="p-4 bg-gradient-to-br from-[#ffd1dc] to-[#e2d1f9] rounded-[15px] text-[#6c5b7b] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_8px_rgba(0,0,0,0.1)]">
-            ⏳ ตรวจสอบสลิป
-          </button>
-          <button className="p-4 bg-gradient-to-br from-[#bae1be] to-[#e2d1f9] rounded-[15px] text-[#6c5b7b] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_8px_rgba(0,0,0,0.1)]">
-            📊 รายงาน
-          </button>
-        </div>
-      </div>
-
       {/* Recent Activities */}
       <div className="bg-white/95 p-6 rounded-[20px] border-2 border-[#ffd1dc] shadow-[0_4px_6px_rgba(0,0,0,0.07)]">
         <h2 className="text-xl font-semibold text-[#6c5b7b] mb-4">กิจกรรมล่าสุด</h2>
