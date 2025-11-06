@@ -1,10 +1,32 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import AdminLogin from './components/AdminLogin';
+import Dashboard from './components/Dashboard';
 
 export default function App() {
-return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4" >Welcome to Tailwind + React!</h1>
-        <p className="text-lg text-gray-700">Your Tailwind CSS setup is working.</p>
-    </div>
-)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('adminToken');
+    setIsLoggedIn(!!token);
+  }, []);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('adminUser');
+    setIsLoggedIn(false);
+  };
+
+  return (
+    <>
+      {isLoggedIn ? (
+        <Dashboard onLogout={handleLogout} />
+      ) : (
+        <AdminLogin onLoginSuccess={handleLoginSuccess} />
+      )}
+    </>
+  );
 }
